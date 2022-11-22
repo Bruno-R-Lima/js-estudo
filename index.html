@@ -1,0 +1,46 @@
+<html>
+    <body>
+        <button onclick="mostraTabuada()">criar tabuada</button>
+
+        <button onclick="limparTabuada()">limpa tabuada</button>
+        <div id="outPut">
+            <h1>text de programação</h1>
+    
+        </div>
+        <script>
+
+            var outPut = Document.querySeletor("#outPut");
+            var mensagem = "";
+
+            function mostraTabuada(){
+                //perguntar o numero para o úsuario
+                var n = prompt("digite um numero");
+                // convertter o numero
+                n = parseFloat(n);
+                //criar um variavel que servira de indice
+                var i = 1;
+                //enquanto indice <= 1000
+                 //concatena na varialvel mensagem
+                while(i <= 1000){
+                    mensagem += n + " x " + i +"=" + (x * i);
+                    i++ ;
+                } 
+                //mostrar mensagem no output 
+                document.write(mensagem);
+            };
+            
+            
+            
+            //outPut.innerHTML = mensagem;
+
+            // let n1= parseInt(prompt("digite um número"));
+            // let n2= 1;
+    
+            // while(n2 <= 1000){
+            //     document.write(`${n1} x ${n2}: ${n1 * n2} <br>`);
+            //     n2 += 1;
+            // }
+    
+        </script>
+    </body>
+</html>
