@@ -3,23 +3,26 @@
         <button onclick="mtabuada()">criar tabuada</button>
 
         <button onclick="ltabuada()">limpa tabuada</button>
-        <div id="output"> </div>
+
+        <div></div>
 
         <script>
-            var output= document.querySelectorAll("#output");
+            var output= document.querySelectorAll("div");
             var tabuada= "";
 
             function mtabuada(){
                 let n= parseInt(prompt("digite um número"));
+
                 let i= 1;
                 while(i < 1000){
                     tabuada += n + " x " + i + " : " + (n*i) + "<br>";
                     i++;
                 };
-                document.write(tabuada);
+                div.innerHTML = tabuada;
             };
           function ltabuada(){
             tabuada="";
+            div.innerHTML= tabuada;
 
           };
             

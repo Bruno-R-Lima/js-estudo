@@ -5,8 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- peça que digite um número e mostre para ele a tabuada de 1 a 1000 desse número e der um espaço entre elas -->
 </head>
 <body>
     
+    <script>
+       var numero= prompt("digite um numero");
+       var msg = "";
+       var indece= 1;
+       while(indece <= 1000){
+        msg=(numero + "x" + indece + "=" + (numero*indece)+"<br>");
+        document.write(msg);
+
+        if(indece % 10 === 0){
+            document.write("<br>" + "<hr>");
+        };
+
+        indece = indece + 1;
+       
+       };
+        
+       //document.write(msg);
+        
+
+
+    </script>
 </body>
 </html>
