@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>calculadora</h1>
+    <button onclick="calcular('+')">+</button>
+    <button onclick="calcular('-')">-</button>
+    <button onclick="calcular('*')">*</button>
+    <button onclick="calcular('/')">/</button>
+
+    <div id="saida">msg</div>
+
+    <script>
+       var n = parseFloat(prompt("digite um número!"));
+
+       function escreva(){
+        let saida= document.querySelector("#saida");
+        saida.innerHTML = n;
+       };
+
+       function calcular(simbolo){
+        let n1 = parseFloat(prompt("digite outro número"));
+        switch(simbolo){
+            case '+' : n += n1; break
+            case '-' : n -= n1; break
+            case '*' : n *= n1; break
+            case '/' : n /= n1; 
+        };
+        escreva();
+       };
+
+    </script>
+</body>
+</html>

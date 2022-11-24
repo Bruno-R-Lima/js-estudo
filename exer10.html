@@ -8,8 +8,30 @@
     <!-- deve pedir para o úsuario um número e mostrar a tabuada desse número de 1 a 1000, deve ter a opção de resertar a tabuada e criar outra. -->
 </head>
 <body>
+    <h1>exercicio de programação!</h1>
+    <button onclick="criarcalculadora()">criar</button>
+    <button onclick="resetarcalculadora()">resete</button>
+
+    <dir id="di">msg</dir>
+
     <script>
+        var di= document.querySelector("#di");
+        var msg="";
         
+        function criarcalculadora(){
+            let n = parseInt(prompt("digite um número!"));
+            resetarcalculadora();
+
+            for(let i=1; i <= 1000; i+=1){
+                msg+= `${n} x ${i} : ${n*i} <br>`;
+            };
+            di.innerHTML= msg;
+        };
+         function resetarcalculadora(){
+            var msg= "";
+            di.innerHTML= msg;
+         };
+
     </script>
 </body>
 </html>
